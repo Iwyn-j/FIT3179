@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Weather Report</title>
+    <title>World Weather Report</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -20,9 +20,6 @@
 
         .page {
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         h1 {
@@ -31,34 +28,26 @@
         }
 
         .visualization-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px; 
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .visualization,
-        .description {
             background-color: #fff;
             border: 1px solid #ccc;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            margin-bottom: 20px; /* Spacing between each visualization block */
         }
 
         .visualization {
-            flex-basis: 75%; /* Larger size for visualization */
-            max-width: 1000px; 
-            min-height: 650px; /* Adjusted for new layout */
+            padding: 20px;
+            text-align: center; /* Center the visualization */
         }
 
         .description {
-            flex-basis: 20%; /* Smaller size for description */
+            padding: 10px 20px;
+            border-top: 1px solid #ccc; /* Add border to separate from visualization */
+            background-color: #f9f9f9; /* Slightly different background for description */
+            color: #333;
         }
 
-        h2, p {
-            color: #333;
-            margin: 0 0 10px 0; 
+        h2 {
+            margin-top: 0; /* Remove top margin for alignment */
         }
     </style>
 </head>
@@ -66,79 +55,91 @@
 <body>
 
     <div class="page">
-        <h1>Earthquake Visualization</h1>
+        <h1>World Weather Report</h1>
 
+        <!-- Weather Map -->
         <div class="visualization-container">
-            <!-- Global Earthquake Map -->
-            <div class="visualization" id="map-visualization"></div>
+            <div class="visualization" id="weather-map"></div>
             <div class="description">
-                <!-- ... existing description ... -->
-            </div>
-        </div>
-        
-        <!-- Earthquake Properties Bubble Chart -->
-        <div class="visualization-container">
-            <div class="visualization" id="earthquake-bubble-chart"></div>
-            <div class="description">
-                <h2>Global Earthquake Map</h2>
-                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
+                <h2>Global Weather Map</h2>
+                <p>This interactive map provides a comprehensive view of the world's weather patterns. You can explore different climatic features across various regions, providing insights into temperature, humidity, precipitation, and more.</p>
             </div>
         </div>
 
-        <!-- Earthquake Magnitude Distribution -->
+        <!-- Average Temperature -->
         <div class="visualization-container">
-            <div class="visualization" id="earthquake-magnitude-distribution"></div>
+            <div class="visualization" id="average-temperature"></div>
             <div class="description">
-                <h2>Global Earthquake Map</h2>
-                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
+                <h2>Average Temperature</h2>
+                <p>This chart displays the global average temperature. The data points can help identify trends over time, indicating whether the world is experiencing a period of warming or cooling.</p>
             </div>
         </div>
 
-        <!-- Average Depth by Location -->
+        <!-- Bar Chart -->
         <div class="visualization-container">
-            <div class="visualization" id="average-depth-by-location"></div>
+            <div class="visualization" id="bar-chart"></div>
             <div class="description">
-                <h2>Global Earthquake Map</h2>
-                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
+                <h2>Precipitation Levels</h2>
+                <p>This bar chart represents precipitation levels in different regions around the world. Comparing these levels can help identify areas that are prone to droughts or floods.</p>
             </div>
         </div>
 
-        <!-- Time Series of Earthquake Frequencies -->
+        <!-- Heat Map -->
         <div class="visualization-container">
-            <div class="visualization" id="time-series-of-earthquake-frequencies"></div>
+            <div class="visualization" id="heat-map"></div>
             <div class="description">
-                <h2>Global Earthquake Map</h2>
-                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
+                <h2>Humidity Heatmap</h2>
+                <p>This heat map shows humidity levels worldwide, giving a clear picture of areas with high or low humidity. This information is vital for understanding weather patterns and predicting potential climate changes.</p>
             </div>
         </div>
 
-        <!-- UV Index Visualization -->
+        <!-- Line Chart -->
         <div class="visualization-container">
-            <div class="visualization" id="uv-index-visualization"></div>
+            <div class="visualization" id="line-chart"></div>
             <div class="description">
-                <h2>Global Earthquake Map</h2>
-                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
+                <h2>Wind Speed Trends</h2>
+                <p>This line chart illustrates the trends of wind speeds over time in different locations across the globe. Analyzing these trends is crucial for predicting weather patterns and potential storm formations.</p>
+            </div>
+        </div>
+
+        <!-- Scatter Plot -->
+        <div class="visualization-container">
+            <div class="visualization" id="scatter-plot"></div>
+            <div class="description">
+                <h2>Cloud Coverage and Visibility</h2>
+                <p>This scatter plot displays the relationship between cloud coverage and visibility. The plot can reveal how cloudiness can affect visibility in various parts of the world.</p>
+            </div>
+        </div>
+
+        <!-- UV Index -->
+        <div class="visualization-container">
+            <div class="visualization" id="uv-index"></div>
+            <div class="description">
+                <h2>UV Index Levels</h2>
+                <p>This visualization represents the UV Index levels around the world. It's essential for understanding the potential risks of sun exposure in different regions.</p>
             </div>
         </div>
 
     </div>
 
     <script type="text/javascript">
-        // Your JSON file paths
-        var mapVisualizationURL = './json/map.json';
-        var earthquakeBubbleChartURL = './json/scatterPlot.json';
-        var earthquakeMagnitudeDistributionURL = './json/lineChart.json';
-        var averageDepthByLocationURL = './json/heatMap.json';
-        var timeSeriesOfEarthquakeFrequenciesURL = './json/barChart.json';
-        var uvIndexVisualizationURL = './json/uvIndex.json'; // Added new visualization
+        // Paths to your JSON files
+        var mapURL = './json/map.json';
+        var averageTempURL = './json/averageTemp.json';
+        var barChartURL = './json/barChart.json';
+        var heatMapURL = './json/heatMap.json';
+        var lineChartURL = './json/lineChart.json';
+        var scatterPlotURL = './json/scatterPlot.json';
+        var uvIndexURL = './json/uvIndex.json';
 
         // Embedding the visualizations
-        vegaEmbed('#map-visualization', mapVisualizationURL);
-        vegaEmbed('#earthquake-bubble-chart', earthquakeBubbleChartURL);
-        vegaEmbed('#earthquake-magnitude-distribution', earthquakeMagnitudeDistributionURL);
-        vegaEmbed('#average-depth-by-location', averageDepthByLocationURL);
-        vegaEmbed('#time-series-of-earthquake-frequencies', timeSeriesOfEarthquakeFrequenciesURL);
-        vegaEmbed('#uv-index-visualization', uvIndexVisualizationURL); // Embedding new visualization
+        vegaEmbed('#weather-map', mapURL);
+        vegaEmbed('#average-temperature', averageTempURL);
+        vegaEmbed('#bar-chart', barChartURL);
+        vegaEmbed('#heat-map', heatMapURL);
+        vegaEmbed('#line-chart', lineChartURL);
+        vegaEmbed('#scatter-plot', scatterPlotURL);
+        vegaEmbed('#uv-index', uvIndexURL);
     </script>
 
 </body>
