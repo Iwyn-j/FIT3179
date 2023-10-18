@@ -121,12 +121,14 @@
         var earthquakeMagnitudeDistributionURL = './json/lineChart.json';
         var averageDepthByLocationURL = './json/heatMap.json';
         var timeSeriesOfEarthquakeFrequenciesURL = './json/barChart.json';
+        var t1 = './json/averageTemp.json';
 
         vegaEmbed('#map-visualization', mapVisualizationURL);
         vegaEmbed('#earthquake-bubble-chart', earthquakeBubbleChartURL);
         vegaEmbed('#earthquake-magnitude-distribution', earthquakeMagnitudeDistributionURL);
         vegaEmbed('#average-depth-by-location', averageDepthByLocationURL);
         vegaEmbed('#time-series-of-earthquake-frequencies', timeSeriesOfEarthquakeFrequenciesURL);
+        vegaEmbed('t1', t1);
     </script>
 
 </body>
