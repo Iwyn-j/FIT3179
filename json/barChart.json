@@ -1,8 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A bar chart that shows the average air quality (PM2.5) by country.",
+  "width": 600,  // Adjust the width as needed
+  "height": 400,  // Adjust the height as needed
   "data": {"url": "https://raw.githubusercontent.com/Iwyn-j/FIT3179/main/GlobalWeatherRepository.csv"},
-  "title": {"text": "Top 10 Countries by Average PM2.5 Levels", "fontSize": 15, "font": "Arial", "color": "black"},
+  "title": {"text": "Top 10 Countries by Average PM2.5 Levels", "fontSize": 24, "font": "Arial", "color": "navy"},
   "mark": "bar",
   "transform": [
     {
