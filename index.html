@@ -69,20 +69,19 @@
         <h1>Earthquake Visualization</h1>
 
         <div class="visualization-container">
-            <!-- New section for the map visualization -->
+            <!-- Global Earthquake Map -->
             <div class="visualization" id="map-visualization"></div>
             <div class="description">
-                <h2>Global Earthquake Map</h2>
-                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
+                <!-- ... existing description ... -->
             </div>
         </div>
         
-                <!-- Earthquake Properties Bubble Chart -->
+        <!-- Earthquake Properties Bubble Chart -->
         <div class="visualization-container">
             <div class="visualization" id="earthquake-bubble-chart"></div>
             <div class="description">
-                <h2>Earthquake Properties Bubble Chart</h2>
-                <p>The "Earthquake Properties Bubble Chart" is a dynamic and informative visualization that offers a comprehensive view of earthquake characteristics, combining depth, significance, alert level, and magnitude in a single graphical representation. This chart is a powerful tool for understanding and comparing earthquake properties across a range of seismic events.</p>
+                <h2>Global Earthquake Map</h2>
+                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
             </div>
         </div>
 
@@ -90,8 +89,8 @@
         <div class="visualization-container">
             <div class="visualization" id="earthquake-magnitude-distribution"></div>
             <div class="description">
-                <h2>Earthquake Magnitude Distribution</h2>
-                <p>The "Earthquake Magnitude Distribution" graph provides a visual representation of the distribution of earthquake magnitudes over a specific period. This graph offers valuable insights into the frequency and intensity of seismic activity, which is a fundamental aspect of understanding earthquake patterns.</p>
+                <h2>Global Earthquake Map</h2>
+                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
             </div>
         </div>
 
@@ -99,8 +98,8 @@
         <div class="visualization-container">
             <div class="visualization" id="average-depth-by-location"></div>
             <div class="description">
-                <h2>Average Depth by Location</h2>
-                <p>The "Average Depth by Location" graph displays the average depth of earthquakes by country. It provides insights into how earthquake depths vary across different countries.</p>
+                <h2>Global Earthquake Map</h2>
+                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
             </div>
         </div>
 
@@ -108,39 +107,40 @@
         <div class="visualization-container">
             <div class="visualization" id="time-series-of-earthquake-frequencies"></div>
             <div class="description">
-                <h2>Earthquake Frequencies</h2>
-                <p>the "Time Series of Earthquake Frequencies" chart shows how the number of earthquakes has varied over time. It helps in understanding the temporal patterns of earthquake occurrences.</p>
+                <h2>Global Earthquake Map</h2>
+                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
             </div>
         </div>
 
-        <!-- Time Series of Earthquake Frequencies -->
+        <!-- UV Index Visualization -->
         <div class="visualization-container">
-            <div class="visualization" id="t1"></div>
+            <div class="visualization" id="uv-index-visualization"></div>
             <div class="description">
-                <h2>Earthquake Frequencies</h2>
-                <p>the "Time Series of Earthquake Frequencies" chart shows how the number of earthquakes has varied over time. It helps in understanding the temporal patterns of earthquake occurrences.</p>
+                <h2>Global Earthquake Map</h2>
+                <p>This map provides a global view of earthquakes, indicating affected areas. By visualizing the data, we gain insights into patterns and can identify regions with higher seismic activity. The color intensity and points on the map correspond to the magnitude of the earthquakes, providing a quick overview of the most affected areas.</p>
             </div>
         </div>
 
     </div>
 
     <script type="text/javascript">
+        // Your JSON file paths
         var mapVisualizationURL = './json/map.json';
         var earthquakeBubbleChartURL = './json/scatterPlot.json';
         var earthquakeMagnitudeDistributionURL = './json/lineChart.json';
         var averageDepthByLocationURL = './json/heatMap.json';
         var timeSeriesOfEarthquakeFrequenciesURL = './json/barChart.json';
-        var t1 = './json/averageTemp.json';
+        var uvIndexVisualizationURL = './json/uvIndex.json'; // Added new visualization
 
+        // Embedding the visualizations
         vegaEmbed('#map-visualization', mapVisualizationURL);
         vegaEmbed('#earthquake-bubble-chart', earthquakeBubbleChartURL);
         vegaEmbed('#earthquake-magnitude-distribution', earthquakeMagnitudeDistributionURL);
         vegaEmbed('#average-depth-by-location', averageDepthByLocationURL);
         vegaEmbed('#time-series-of-earthquake-frequencies', timeSeriesOfEarthquakeFrequenciesURL);
-        vegaEmbed('#t1', t1);
+        vegaEmbed('#uv-index-visualization', uvIndexVisualizationURL); // Embedding new visualization
     </script>
 
 </body>
 
 </html>
-
