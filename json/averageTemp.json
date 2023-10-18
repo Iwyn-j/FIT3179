@@ -2,8 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "A bar chart that shows the average temperature by country.",
   "background": "#f5f5f5",
-  "padding": 40,
-  "height": 250, 
+  "padding": {"left": 60, "right": 30, "top": 40, "bottom": 60},
+  "width": 100,  // Adjust the width as needed
+  "height": 300,  // Adjust the height as needed
   "title": {
     "text": "Average Temperature by Country",
     "fontSize": 18,
