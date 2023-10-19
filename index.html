@@ -21,9 +21,6 @@
 
     .page {
         padding: 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* creates a responsive grid layout */
-        gap: 20px; /* space between grid items */
     }
 
     h1 {
@@ -37,12 +34,6 @@
         border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for the containers */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px; /* Spacing between each visualization block */
-        min-height: 300px; /* Adjusted for better spacing for visualizations */
-    }
-
-    .map-container {
-        grid-column: 1 / -1; /* makes the map container span the full width of the grid */
-        min-height: 600px; /* more space specifically for the map */
     }
 
     .visualization {
@@ -51,7 +42,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: inherit; /* Visualization takes full height of its container */
+        min-height: 600px; /* Adjust height as necessary for visualization */
     }
 
     .description {
@@ -73,6 +64,7 @@
         color: rgba(255, 255, 255, 0.7); /* Slightly faded white for a softer appearance */
     }
 </style>
+
 
 </head>
 
@@ -142,6 +134,10 @@
                 <h2>UV Index Levels</h2>
                 <p>This visualization represents the UV Index levels around the world. It's essential for understanding the potential risks of sun exposure in different regions.</p>
             </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
         </div>
 
     </div>
