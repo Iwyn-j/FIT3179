@@ -12,43 +12,50 @@
 
     <style>
         body {
-            font-family: 'Roboto', sans-serif; /* Aesthetic font */
-            background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); /* Gradient background */
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #373b44, #4286f4); /* Blue gradient */
+            color: #FFF; /* Making text white for better readability on dark background */
             margin: 0;
             padding: 0;
         }
 
         .page {
             padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid layout */
+            grid-gap: 20px; /* Adds some space between your elements */
         }
 
         h1 {
-            color: #333;
+            color: #FFF;
             text-align: center;
+            grid-column: 1 / -1; /* Makes the heading span all columns */
         }
 
         .visualization-container {
-            background-color: #fff;
-            border: 1px solid #ccc;
+            display: flex; /* Making use of flexbox for centering and layout */
+            flex-direction: column; /* Stacking children vertically */
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly white transparent background */
+            border-radius: 15px; /* Rounded corners */
+            overflow: hidden; /* Ensures the container respects the border radius */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: transform .2s; /* Animation */
+            transition: transform .2s;
         }
 
         .visualization-container:hover {
-            transform: scale(1.03); /* Add some interactivity */
+            transform: scale(1.03);
         }
 
         .visualization {
             padding: 20px;
             text-align: center;
+            flex-grow: 1; /* Allows this area to take any remaining space */
         }
 
         .description {
             padding: 10px 20px;
-            border-top: 1px solid #ccc;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: rgba(0, 0, 0, 0.1); /* Slightly dark transparent background */
+            color: #FFF;
         }
 
         h2 {
