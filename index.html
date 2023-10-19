@@ -11,57 +11,69 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to right, #373b44, #4286f4); /* Blue gradient */
-            color: #FFF; /* Making text white for better readability on dark background */
-            margin: 0;
-            padding: 0;
-        }
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-image: linear-gradient(to right, #2b5876, #4e4376);
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
 
-        .page {
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid layout */
-            grid-gap: 20px; /* Adds some space between your elements */
-        }
+    .page {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* creates a responsive grid layout */
+        gap: 20px; /* space between grid items */
+    }
 
-        h1 {
-            color: #FFF;
-            text-align: center;
-            grid-column: 1 / -1; /* Makes the heading span all columns */
-        }
+    h1 {
+        color: #FFFFFF;
+        text-align: center;
+        padding: 20px 0; /* Added padding for better spacing */
+    }
 
-        .visualization-container {
-            display: flex; /* Making use of flexbox for centering and layout */
-            flex-direction: column; /* Stacking children vertically */
-            background-color: rgba(255, 255, 255, 0.1); /* Slightly white transparent background */
-            border-radius: 15px; /* Rounded corners */
-            overflow: hidden; /* Ensures the container respects the border radius */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform .2s;
-        }
+    .visualization-container {
+        background-color: rgba(255, 255, 255, 0.1); /* Slight white background for contrast */
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for the containers */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px; /* Spacing between each visualization block */
+        min-height: 300px; /* Adjusted for better spacing for visualizations */
+    }
 
-        .visualization-container:hover {
-            transform: scale(1.03);
-        }
+    .map-container {
+        grid-column: 1 / -1; /* makes the map container span the full width of the grid */
+        min-height: 600px; /* more space specifically for the map */
+    }
 
-        .visualization {
-            padding: 20px;
-            text-align: center;
-            flex-grow: 1; /* Allows this area to take any remaining space */
-        }
+    .visualization {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: inherit; /* Visualization takes full height of its container */
+    }
 
-        .description {
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.1); /* Slightly dark transparent background */
-            color: #FFF;
-        }
+    .description {
+        padding: 10px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3); /* Lighter border color for better contrast */
+        background-color: rgba(255, 255, 255, 0.2); /* Slightly visible background for description */
+        color: #FFFFFF; /* White text for better readability */
+    }
 
-        h2 {
-            margin-top: 0;
-        }
-    </style>
+    h2 {
+        margin-top: 0; /* Remove top margin for alignment */
+    }
+
+    /* Copyright text styling */
+    .copyright {
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.9em;
+        color: rgba(255, 255, 255, 0.7); /* Slightly faded white for a softer appearance */
+    }
+</style>
+
 </head>
 
 <body>
