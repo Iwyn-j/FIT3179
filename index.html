@@ -12,22 +12,14 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Roboto', sans-serif; /* Aesthetic font */
+            background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea); /* Gradient background */
             margin: 0;
             padding: 0;
         }
 
         .page {
             padding: 20px;
-        }
-
-        .visualization {
-        padding: 20px;
-        text-align: center; /* Center inline or inline-block children */
-        display: flex; /* Establishes this element as a Flex container */
-        justify-content: center; /* Center children along the main axis */
-        align-items: center; /* Center children along the cross axis */
         }
 
         h1 {
@@ -39,23 +31,28 @@
             background-color: #fff;
             border: 1px solid #ccc;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* Spacing between each visualization block */
+            margin-bottom: 20px;
+            transition: transform .2s; /* Animation */
+        }
+
+        .visualization-container:hover {
+            transform: scale(1.03); /* Add some interactivity */
         }
 
         .visualization {
             padding: 20px;
-            text-align: center; /* Center the visualization */
+            text-align: center;
         }
 
         .description {
             padding: 10px 20px;
-            border-top: 1px solid #ccc; /* Add border to separate from visualization */
-            background-color: #f9f9f9; /* Slightly different background for description */
+            border-top: 1px solid #ccc;
+            background-color: #f9f9f9;
             color: #333;
         }
 
         h2 {
-            margin-top: 0; /* Remove top margin for alignment */
+            margin-top: 0;
         }
     </style>
 </head>
